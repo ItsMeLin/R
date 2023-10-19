@@ -638,7 +638,7 @@ def login():
     elif username == user and password == passwd:
         print("⚡ Welcome to Its C2!")
         time.sleep(0.3)
-        ascii_vro()
+        Its_pembukaan()
         main()
 
 login()
