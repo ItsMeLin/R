@@ -629,7 +629,7 @@ CLEAR   ► CLEAR TERMINAL
 
 def login():
     clear()
-    user = "Tipak"
+    user = "2"
     passwd = "2"
     username = input(" Username: ")
     password = getpass.getpass(prompt=' Password: ')
@@ -640,7 +640,7 @@ def login():
     elif username == user and password == passwd:
         print("⚡ Welcome to Its C2!")
         time.sleep(0.3)
-        its_pembukaan()
+        Its_pembukaan()
         main()
 
 login()
